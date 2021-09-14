@@ -7,6 +7,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <link rel="stylesheet" href="@yield('estilito404')">
+    <script src="https://kit.fontawesome.com/b6028d284b.js" crossorigin="anonymous"></script>
 </head>
 <body>
     @yield('nav')

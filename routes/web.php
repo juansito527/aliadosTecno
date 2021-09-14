@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FiltroEmpresasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,6 @@ Route::get('/', function () {
 Route::get('/error', function () {
     return view('error404');
 });
+
+/* ruta para llamar la vista de el filtro de empresas */
+Route::get('FiltroEmpresa',[FiltroEmpresasController::class,'FiltroVistaEmpresa']);
