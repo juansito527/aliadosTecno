@@ -78,5 +78,7 @@
       menu.classList.toggle("hidden");
     });
   </script>
+  @yield('signup')
+  <script src="{{asset('js/main/signup.js')}}"></script>
 </body>
 </html>
