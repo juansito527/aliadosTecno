@@ -5,12 +5,12 @@
 @section('content')
 
 <div class=" mt-5 flex justify-around ">
-    <div class=" text-4xl text-yellow-600 ">
+    <div class="text-1xl text-yellow-600 lg:text-4xl">
         <i class="fas fa-briefcase mx-5"></i><label for="">Empresas</label>
     </div>
     <div class="text-black">
-        <input type="text" class="bg-yellow-500 opacity-50  border rounded text-1xl  w-80">
-        <button class="bg-yellow-500 rounded-lg p-1  text-white px-4"><i class="fas fa-search mx-2 text-1xl"></i>Buscar</button>
+        <input type="text" class="bg-yellow-500 opacity-50  border rounded text-1xl  w-20 lg:w-80">
+        <button class="bg-yellow-500 rounded-lg p-1  text-white px-1 lg:px-4"><i class="fas fa-search mx-2 text-1xl"></i>Buscar</button>
     </div>
 </div>
 
