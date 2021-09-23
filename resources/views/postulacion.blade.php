@@ -127,7 +127,7 @@
 
           <div class="-mx-3 md:flex mt-2">
             <div class="md:w-full px-3"> 
-              <button type="button" class="md:w-full bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full" onclick="plusSlides(1)">
+              <button type="button" class="md:w-full bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(2)">
                 Continuar
               </button>
             </div>
@@ -209,8 +209,8 @@
 
           <div class="-mx-3 md:flex mt-2 ">
             <div class="md:w-full px-3  flex justify-around"> 
-              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full"> Volver</button>
-              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full" onclick="plusSlides(2)">
+              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(1)"> Volver</button>
+              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(3); window.scrollTo(0, 69);">
                 Continuar
               </button>
               
@@ -219,7 +219,6 @@
         </div>
       </form>
     </div>
-</div>
  {{-- form 2  DATOS DE LA EMPRESA--}}
 
 
@@ -297,8 +296,8 @@
 
           <div class="-mx-3 md:flex mt-2 ">
             <div class="md:w-full px-3  flex justify-around"> 
-              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full"> Volver</button>
-              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full" onclick="plusSlides(3)">
+              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(2)"> Volver</button>
+              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" >
                 Continuar
               </button>
               
@@ -307,7 +306,6 @@
         </div>
       </form>
     </div>
-</div>
  {{-- form 3  DATOS DE LA EMPRESA--}}
 
 
