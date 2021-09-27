@@ -7,7 +7,7 @@ use App\Http\Controllers\postulacionController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('inicio');
 
 Route::get('/error', function () {
     return view('error404');
@@ -17,4 +17,4 @@ Route::get('/error', function () {
 Route::get('FiltroEmpresa', [FiltroEmpresasController::class, 'FiltroVistaEmpresa']);
 
 /* ruta para llamar la vista de postulacion*/
-Route::get('postulacion', [postulacionController::class, 'vistaPostulacion']);
+Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->name('postularce');

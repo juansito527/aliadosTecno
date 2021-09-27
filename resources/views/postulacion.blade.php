@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title','Aliados tecno - Filtro Empresas')
+@section('title','Aliados tecno - Postulacion')
 @section('nav')
 @endsection
 @section('content')
@@ -209,8 +209,8 @@
 
           <div class="-mx-3 md:flex mt-2 ">
             <div class="md:w-full px-3  flex justify-around"> 
-              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(1)"> Volver</button>
-              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(3); window.scrollTo(0, 69);">
+              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(1);window.scrollTo(0, 0);"> Volver</button>
+              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(3); window.scrollTo(0, 70);">
                 Continuar
               </button>
               
@@ -231,7 +231,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                MUÑEÑOOO*
+                Registro Mercantil #:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -239,7 +239,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Nombre comercial*
+                Matricula de industria y Comercio #:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -247,7 +247,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Naturaleza juridica*
+                Regimen Tributario:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -255,7 +255,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Representante legal*
+                Registro Unico Tributario:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -263,7 +263,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Cedula del representante legal*
+                Sector economico:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -271,7 +271,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-               Direccion de la empresa y/o negocio*
+               Actividad principal:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -279,34 +279,82 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Telefonos*
+                Descripcion de productos
               </label>
-              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
+              <textarea  class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" ></textarea>
             </div>
           </div>
-          <div class="-mx-3 md:flex mb-6">
-            <div class="md:w-full px-3">
-              <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-               Correo electronico (empresa)*
-              </label>
-              <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
-            </div>
-          </div>
+          
           
 
           <div class="-mx-3 md:flex mt-2 ">
             <div class="md:w-full px-3  flex justify-around"> 
-              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(2)"> Volver</button>
-              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" >
+              <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(2);window.scrollTo(0, 0);"> Volver</button>
+              <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(4); window.scrollTo(0, 70);">
                 Continuar
               </button>
-              
             </div>
           </div>
         </div>
       </form>
     </div>
  {{-- form 3  DATOS DE LA EMPRESA--}}
+
+
+ {{-- FORM4 PARA ADJUNTAR LOS ARCHIVOS --}}
+ <div class="sgForm">
+  <form>
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+      
+      
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-full px-3">
+          <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+            Subir modelo de negocio:
+          </label>
+          <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
+        </div>
+      </div>
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-full px-3">
+          <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+            Rut de la empresa:
+          </label>
+          <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
+        </div>
+      </div>
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-full px-3">
+          <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+            Camara de comercio de la empresa:
+          </label>
+          <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
+        </div>
+      </div>
+      <div class="-mx-3 md:flex mb-6">
+        <div class="md:w-full px-3">
+          <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
+            portafolio de servicios(opcional):
+          </label>
+          <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
+        </div>
+      </div>
+      
+      
+      
+
+      <div class="-mx-3 md:flex mt-2 ">
+        <div class="md:w-full px-3  flex justify-around"> 
+          <button  type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot" onclick="currentSlide(3);window.scrollTo(0, 0);"> Volver</button>
+          <button type="button" class="md:w-80 bg-gray-900 text-white font-bold py-2 px-4 border-b-4 hover:border-b-2 border-gray-500 hover:border-gray-100 rounded-full btnDot">
+            Continuar
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+ {{-- CIERRE FORM4 PARA ADJUNTAR LOS ARCHIVOS --}}
 
 
 </div>

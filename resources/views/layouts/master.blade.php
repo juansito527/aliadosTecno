@@ -26,9 +26,9 @@
 
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
-            <a href="" class="py-4 px-2 text-yellow-500 border-b-4 border-yellow-500 font-semibold ">Inicio</a>
-            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-yellow-500 transition duration-300">Servicios</a>
-            <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-yellow-500 transition duration-300">Contactenos</a>
+            <a href="{{route('inicio')}}" class="py-4 px-2 text-yellow-500 border-b-4 border-yellow-500 font-semibold ">Inicio</a>
+            <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-yellow-500 transition duration-300">Servicios</a>
+            <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-yellow-500 transition duration-300">Contactenos</a>
           </div>
 
         </div>
