@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FiltroEmpresasController;
+use App\Http\Controllers\InicioDeSesionController;
 use App\Http\Controllers\postulacionController;
 
 
@@ -18,3 +20,9 @@ Route::get('FiltroEmpresa', [FiltroEmpresasController::class, 'FiltroVistaEmpres
 
 /* ruta para llamar la vista de postulacion*/
 Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->name('postularce');
+
+/* ruta para llamar la vista de login*/
+Route::get('iniciar-Sesion', [InicioDeSesionController::class, 'vistaLogin'])->name('login');
+
+/* ruta para llamar la vista de adm*/
+Route::get('Admin', [adminController::class, 'vistaAdmin'])->name('adm');

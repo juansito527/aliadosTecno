@@ -20,7 +20,7 @@
             </div>
         </div>
   </div>
-  <div class="grid grid-cols-4">
+  {{-- <div class="grid grid-cols-4">
         <div class="col-span-4 lg:col-span-2">
             <img class="w-full" src="{{asset('img/baner.png')}}" alt="">
         </div>
@@ -35,7 +35,7 @@
                 <a href="{{route('postularce')}}"><button class="bg-yellow-500 text-white font-bold rounded-full w-40 h-10 mr-8 ml-3 hover:bg-green-500">POSTULARME!!</button></a>
             </div>
         </div>
-  </div>
+  </div> --}}
 </div>
 @endsection
 @section('js')

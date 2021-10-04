@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="@yield('estilito404')">
     <script src="https://kit.fontawesome.com/b6028d284b.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body @yield('estilosbody')>
     @yield('nav')
     
   <nav class="bg-white shadow-lg  w-full">
@@ -35,7 +35,7 @@
 
         <!-- Secondary Navbar items -->
         <div class="hidden md:flex items-center space-x-3 ">
-          <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Iniciar Sesion</a>
+          <a href="{{route('login')}}" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Iniciar Sesion</a>
           <a href="" class="py-2 px-2 font-medium text-white bg-yellow-500 rounded hover:bg-green-400 transition duration-300">Registrarse</a>
         </div>
 
