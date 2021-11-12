@@ -24,5 +24,16 @@ Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->n
 /* ruta para llamar la vista de login*/
 Route::get('iniciar-Sesion', [InicioDeSesionController::class, 'vistaLogin'])->name('login');
 
-/* ruta para llamar la vista de adm*/
-Route::get('Admin', [adminController::class, 'vistaAdmin'])->name('adm');
+
+
+
+
+/* grupo de rutas para admin */
+Route::group(['prefix' => 'admin'], function() {
+    /* retona la vista principal */
+    Route::get('inicio', [adminController::class,'vistaAdmin'])->name('adm');
+    /* retorna la vista modulo empresas */
+    Route::get('ModuloEmpresas', [adminController::class,'vistaModulEmpresas'])->name("ModuloEmpresa");
+});
+
+
