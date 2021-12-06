@@ -46,5 +46,14 @@ class UserController extends Controller
             return back()->withErrors(['email' => 'Correo electrónico no válido'])->withInput([request('email')]);
         }
     }
+
+    public function salir(Request $request)
+    {
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('inicioSesion');
+    }
     
 }

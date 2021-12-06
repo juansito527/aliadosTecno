@@ -14,8 +14,15 @@ Route::get('/', function () {
 
 /* ruta para llamar la vista de login*/
 
-Route::get('vistaInicio',[UserController::class,'vista'])->name('inicioSesion');
-Route::post('inicioSesion',[UserController::class,'login'])->name('logeo');
+Route::get('inicioSesion',[UserController::class,'vista'])->name('inicioSesion')->middleware('guest');
+
+Route::post('menuAdmin',[UserController::class,'login'])->name('logeo');
+
+Route::get('/menuAdmin', function () {
+    return view('admin.adm');
+})->middleware('auth');
+
+Route::get('/salir', [UserController::class,'salir'])->name('salir');
 
 //Route::post('iniciar-Sesion', 'UserController@login')->name('user-login');
 
@@ -32,9 +39,10 @@ Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->n
 /* grupo de rutas para admin */
 Route::group(['prefix' => 'admin'], function() {
     /* retona la vista principal */
-    Route::get('inicio', [adminController::class,'vistaAdmin'])->name('adm');
+    /* Route::get('menuAdmin', [adminController::class,'vistaAdmin'])->name('adm');  */
     /* retorna la vista modulo empresas */
     Route::get('ModuloEmpresas', [adminController::class,'vistaModulEmpresas'])->name("ModuloEmpresa");
 });
+
 
 
