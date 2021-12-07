@@ -31,8 +31,39 @@
     </div>
     <a href="javascript:void(0);" id="toggle_btn"> <i class="fe fe-text-align-left"></i> </a>
     <a class="mobile_btn" id="mobile_btn"> <i class="fas fa-bars"></i> </a>
-    
+
+
+    <div class="d-flex flex-row-reverse bd-highlight" id="hola2">
+        <div class="p-2 bd-highlight">
+
+
+        <div class="actionD">
+            <div class="profile" onclick="menuToggle();">
+                <img src="https://cdn-icons-png.flaticon.com/512/219/219989.png">
+            </div>
+                <div class="menuImg">
+                    <h3>Daniela Alvarez Vargas<br><span>Administrador</span></h3>
+                    <ul>
+                        <li><i class="far fa-user-circle"></i><a href="#"> Perfil</a></li>
+                        <li><i class="fas fa-sign-out-alt"></i><a href="{{ url('salir')}}"> Salir</a></li>
+                    </ul>
+                </div>
+        </div>
+
+        <script>
+            function menuToggle(){
+                const toggleMenu = document.querySelector('.menuImg');
+                toggleMenu.classList.toggle('active');
+            }
+        </script>
+           
+            
+        </div>
+    </div>
+
+
 </div>
+
 <!-- fin cabecera -->
 
 <!-- nav izquierdo -->
