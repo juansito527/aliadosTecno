@@ -20,7 +20,7 @@ Route::post('menuAdmin',[UserController::class,'login'])->name('logeo');
 
 Route::get('/menuAdmin', function () {
     return view('admin.adm');
-})->middleware('auth');
+        })->middleware('auth');
 
 Route::get('/salir', [UserController::class,'salir'])->name('salir');
 
@@ -38,6 +38,7 @@ Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->n
 
 /* grupo de rutas para admin */
 Route::group(['prefix' => 'admin'], function() {
+
     /* retona la vista principal */
     /* Route::get('menuAdmin', [adminController::class,'vistaAdmin'])->name('adm');  */
     /* retorna la vista modulo empresas */

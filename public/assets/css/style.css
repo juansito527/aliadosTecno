@@ -6471,8 +6471,15 @@ h3.page-sub-title {
         padding: 0 15px;
         position: absolute;
         text-align: center;
-        top: 12px;
+        top: 25px;
         z-index: 10
+    }
+
+    .logo-small{
+
+        text-align: center;
+        top: 23px;
+        position: relative;
     }
 
     #toggle_btn {
