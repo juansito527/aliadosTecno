@@ -14,15 +14,15 @@ Route::get('/', function () {
 
 /* ruta para llamar la vista de login*/
 
-Route::get('inicioSesion',[UserController::class,'vista'])->name('inicioSesion')->middleware('guest');
+Route::get('inicioSesion',[UserController::class,'vista'])->middleware('guest')->name('inicioSesion');
 
 Route::post('menuAdmin',[UserController::class,'login'])->name('logeo');
 
-Route::get('/menuAdmin', function () {
-    return view('admin.adm');
-        })->middleware('auth');
+Route::get('menuAdmin',[UserController::class,'menuAdmin'])
+    ->name('menuAdmin')
+    ->middleware('auth');
 
-Route::get('/salir', [UserController::class,'salir'])->name('salir');
+Route::get('/cerrarSesion', [UserController::class,'cerrarSesion'])->name('cerrarSesion');
 
 //Route::post('iniciar-Sesion', 'UserController@login')->name('user-login');
 
@@ -42,7 +42,7 @@ Route::group(['prefix' => 'admin'], function() {
     /* retona la vista principal */
     /* Route::get('menuAdmin', [adminController::class,'vistaAdmin'])->name('adm');  */
     /* retorna la vista modulo empresas */
-    Route::get('ModuloEmpresas', [adminController::class,'vistaModulEmpresas'])->name("ModuloEmpresa");
+    Route::get('ModuloEmpresas', [adminController::class,'vistaModulEmpresas'])->name("ModuloEmpresa")->middleware('auth');
 });
 
 
