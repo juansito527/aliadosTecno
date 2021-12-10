@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -60,5 +61,5 @@ class UserController extends Controller
         $request->session()->regenerateToken();
         return redirect('inicioSesion');
     }
-    
+
 }

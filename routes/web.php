@@ -43,6 +43,9 @@ Route::group(['prefix' => 'admin'], function() {
     /* Route::get('menuAdmin', [adminController::class,'vistaAdmin'])->name('adm');  */
     /* retorna la vista modulo empresas */
     Route::get('ModuloEmpresas', [adminController::class,'vistaModulEmpresas'])->name("ModuloEmpresa")->middleware('auth');
+    Route::get('postulaciones', [adminController::class,'vistaPostulaciones'])->name("postulaciones")->middleware('auth');
+    Route::get('usuarios', [adminController::class,'vistaUsuarios'])->name("usuarios")->middleware('auth');
+    Route::get('aliados', [adminController::class,'vistaAliados'])->name("aliados")->middleware('auth');
 });
 
 

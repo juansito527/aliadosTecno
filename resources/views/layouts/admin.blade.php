@@ -86,7 +86,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-lightbulb"></i></i> <span> Postulaciones
                         </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-booking.html"> Todas las postulaciones </a></li>
+                        <li><a href="{{route("postulaciones")}}"> Todas las postulaciones </a></li>
                         <li><a href="edit-booking.html"> postulaciones Aceptadas </a></li>
                         <li><a href="add-booking.html"> postulaciones Rechazadas </a></li>
                     </ul>
@@ -94,7 +94,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Usuarios </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-customer.html"> todos los usuarios </a></li>
+                        <li><a href="{{route("usuarios")}}"> todos los usuarios </a></li>
                         <li><a href="edit-customer.html"> Editar usuario </a></li>
                         <li><a href="add-customer.html"> Agregar usuario</a></li>
                     </ul>
@@ -102,7 +102,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Aliados </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-rooms.html">Todos los aliados </a></li>
+                        <li><a href="{{route("aliados")}}">Todos los aliados </a></li>
                         <li><a href="edit-room.html"> Editar aliado </a></li>
                         <li><a href="add-room.html"> Agregar aliado </a></li>
                     </ul>
@@ -138,7 +138,6 @@
 <script src="{{asset("assets/plugins/slimscroll/jquery.slimscroll.min.js")}}"></script>
 <script src="{{asset("assets/js/script.js")}}"></script>
 
-
 <!-- datatables -->
 <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
@@ -151,7 +150,32 @@
         }
     } );
 } );
+
+$(document).ready(function() {
+    $('#TablaPostulaciones').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+
+$(document).ready(function() {
+    $('#TablaUsuarios').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+
+$(document).ready(function() {
+    $('#TablaAliados').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
  </script>
+
 
 <!-- datatables -->
 
