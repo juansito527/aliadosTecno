@@ -3,14 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
 
     public function vista(){
         return view('login');
+    }
+
+    public function menuAdmin(){
+        return view('admin.adm');
     }
 
     public function login(Request $request)
@@ -47,13 +53,13 @@ class UserController extends Controller
         }
     }
 
-    public function salir(Request $request)
+    public function cerrarSesion(Request $request)
     {
         Auth::logout();
-
+        
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('inicioSesion');
     }
-    
+
 }

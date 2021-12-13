@@ -11,6 +11,7 @@
 		integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 	<link rel="stylesheet" href="{{asset("assets/css/feathericon.min.css")}}">
 	<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
+
     @yield('css')
 </head>
 <body>
@@ -22,7 +23,7 @@
 <div class="header">
     <!-- icono con titulo -->
     <div class="header-left">
-        <a href="index.html" class="logo"> <img
+        <a href="{{route("menuAdmin")}}" class="logo"> <img
             src="{{asset("assets/img/profiles/avatar.jpg")}}"
                 width="50" height="70" alt="logo"> <span class="logoclass">Red-Aliados</span> </a>
         <a href="index.html" class="logo logo-small"> <img
@@ -42,10 +43,10 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/219/219989.png">
             </div>
                 <div class="menuImg">
-                    <h3>Daniela Alvarez Vargas<br><span>Administrador</span></h3>
+                    <h3>{{ Auth::user()->name }}<br><span>Administrador</span></h3>
                     <ul>
                         <li><i class="far fa-user-circle"></i><a href="#"> Perfil</a></li>
-                        <li><i class="fas fa-sign-out-alt"></i><a href="{{ url('salir')}}"> Salir</a></li>
+                        <li><i class="fas fa-sign-out-alt"></i><a href="{{ url('cerrarSesion')}}">Cerrar sesión</a></li>
                     </ul>
                 </div>
         </div>
@@ -71,7 +72,7 @@
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-                <li class="active"> <a href="index.html"><i class="fas fa-tachometer-alt"></i>
+                <li class="active"> <a href="{{route("menuAdmin")}}"><i class="fas fa-tachometer-alt"></i>
                         <span>Inicio</span></a> </li>
                 <li class="list-divider"></li>
                 <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Empresas </span> <span
@@ -85,7 +86,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-lightbulb"></i></i> <span> Postulaciones
                         </span> <span class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-booking.html"> Todas las postulaciones </a></li>
+                        <li><a href="{{route("postulaciones")}}"> Todas las postulaciones </a></li>
                         <li><a href="edit-booking.html"> postulaciones Aceptadas </a></li>
                         <li><a href="add-booking.html"> postulaciones Rechazadas </a></li>
                     </ul>
@@ -93,7 +94,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-user"></i> <span> Usuarios </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-customer.html"> todos los usuarios </a></li>
+                        <li><a href="{{route("usuarios")}}"> todos los usuarios </a></li>
                         <li><a href="edit-customer.html"> Editar usuario </a></li>
                         <li><a href="add-customer.html"> Agregar usuario</a></li>
                     </ul>
@@ -101,7 +102,7 @@
                 <li class="submenu"> <a href="#"><i class="fas fa-key"></i> <span> Aliados </span> <span
                             class="menu-arrow"></span></a>
                     <ul class="submenu_class" style="display: none;">
-                        <li><a href="all-rooms.html">Todos los aliados </a></li>
+                        <li><a href="{{route("aliados")}}">Todos los aliados </a></li>
                         <li><a href="edit-room.html"> Editar aliado </a></li>
                         <li><a href="add-room.html"> Agregar aliado </a></li>
                     </ul>
@@ -132,7 +133,50 @@
 
 
 @yield('js')
+
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script src="{{asset("assets/plugins/slimscroll/jquery.slimscroll.min.js")}}"></script>
 <script src="{{asset("assets/js/script.js")}}"></script>
+
+<!-- datatables -->
+<script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+
+<script>
+   $(document).ready(function() {
+    $('#example').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+
+$(document).ready(function() {
+    $('#TablaPostulaciones').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+
+$(document).ready(function() {
+    $('#TablaUsuarios').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+
+$(document).ready(function() {
+    $('#TablaAliados').DataTable( {
+        language: {
+            url: 'https://cdn.datatables.net/plug-ins/1.11.3/i18n/es_es.json'
+        }
+    } );
+} );
+ </script>
+
+
+<!-- datatables -->
+
 </body>

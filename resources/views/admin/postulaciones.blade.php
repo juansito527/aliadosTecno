@@ -15,7 +15,7 @@
 
 <br>
 
-<table id="example" class="table table-striped" style="width:100%">
+<table id="TablaPostulaciones" class="table table-striped" style="width:100%">
     <thead style="background-color: #FFA500; color: #fff">
         <tr>
             <th>Name</th>
