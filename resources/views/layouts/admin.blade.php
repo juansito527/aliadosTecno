@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="{{asset("assets/css/style.css")}}">
 
     @yield('css')
+    @livewireStyles
 </head>
 <body>
 @yield('cabeceraYnav')
@@ -68,11 +69,11 @@
 <!-- fin cabecera -->
 
 <!-- nav izquierdo -->
-<div class="sidebar" id="sidebar">
+<div class="sidebar shadow-sm" id="sidebar">
     <div class="sidebar-inner slimscroll">
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
-                <li class="active"> <a href="{{route("menuAdmin")}}"><i class="fas fa-tachometer-alt"></i>
+                <li class=""> <a href="{{route("menuAdmin")}}"><i class="fas fa-tachometer-alt"></i>
                         <span>Inicio</span></a> </li>
                 <li class="list-divider"></li>
                 <li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Empresas </span> <span
@@ -132,6 +133,7 @@
 
 
 
+
 @yield('js')
 
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
@@ -178,5 +180,5 @@ $(document).ready(function() {
 
 
 <!-- datatables -->
-
+@livewireScripts
 </body>

@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Redirect;
 class UserController extends Controller
 {
 
+    
+
     public function vista(){
         return view('login');
     }
@@ -59,7 +61,9 @@ class UserController extends Controller
         
         $request->session()->invalidate();
         $request->session()->regenerateToken();
+        session_abort();
         return redirect('inicioSesion');
+        
     }
 
 }
