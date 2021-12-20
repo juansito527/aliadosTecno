@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
 use App\Models\User;
@@ -9,19 +10,23 @@ class adminController extends Controller
 {
 
     public function vistaModulEmpresas(){
-        return view('admin/ModulEmpresas');
+        $data = ['UsuarioLogeado'=>User::where('id', '=', session('UsuarioLogeado'))->first()];
+        return view('admin/ModulEmpresas', $data);
     }
 
     public function vistaPostulaciones(){
-        return view('admin/postulaciones');
+        $data = ['UsuarioLogeado'=>User::where('id', '=', session('UsuarioLogeado'))->first()];
+        return view('admin/postulaciones', $data);
     }
 
     public function vistaUsuarios(){
-        return view('admin/usuarios');
+        $data = ['UsuarioLogeado'=>User::where('id', '=', session('UsuarioLogeado'))->first()];
+        return view('admin/usuarios', $data);
     }
 
     public function vistaAliados(){
-        return view('admin/aliados');
+        $data = ['UsuarioLogeado'=>User::where('id', '=', session('UsuarioLogeado'))->first()];
+        return view('admin/aliados', $data);
     }
 
 }

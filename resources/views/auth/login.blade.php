@@ -15,7 +15,16 @@
             <p class="text-center text-3xl font-bold">
                 Bienvenido
             </p>
-            <form class="flex flex-col pt-3 md:pt-8" method="POST" action="{{ route('logeo') }}">
+
+            <form class="flex flex-col pt-3 md:pt-8" method="POST" action="{{route('verificarLogin')}}">
+
+
+                @if (Session::get('fail'))
+                <div class="bg-red-100 border border-red-400 text-red-700 px-1 py-1 rounded relative" role="alert">
+                    <span role="alert" class="block sm:inline">{{ Session::get('fail') }}</span>
+                    <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
+                </div>
+                @endif
                 
                 @csrf
                 <div class="flex flex-col pt-4">
@@ -34,7 +43,7 @@
                             <span role="alert" class="block sm:inline">{{ $message }}</span>
                             <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
                           </div>
-                    @enderror
+                        @enderror
 
                         
                 </div>
@@ -53,7 +62,7 @@
                             <span role="alert" class="block sm:inline">{{ $message }}</span>
                             <span class="absolute top-0 bottom-0 right-0 px-4 py-3"></span>
                           </div>
-                    @enderror
+                        @enderror
                         
                 </div>
 
@@ -74,7 +83,7 @@
 
     <!-- Image Section -->
     <div class="w-1/2 shadow-2xl">
-        <img class="object-cover w-full h-screen hidden md:block" src="https://live.staticflickr.com/3125/4040392671_5ca5aae351_b.jpg">
+        <img class="object-cover w-full h-screen hidden md:block" src="{{asset("img/img-login.jpg")}}">
     </div>
 </div>
 @endsection

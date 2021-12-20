@@ -43,7 +43,7 @@
                 <img src="https://cdn-icons-png.flaticon.com/512/219/219989.png">
             </div>
                 <div class="menuImg">
-                    <h3>{{ Auth::user()->name }}<br><span>Administrador</span></h3>
+                    <h3>{{ $UsuarioLogeado['name'] }}<br><span>Administrador</span></h3>
                     <ul>
                         <li><i class="far fa-user-circle"></i><a href="#"> Perfil</a></li>
                         <li><i class="fas fa-sign-out-alt"></i><a href="{{ url('cerrarSesion')}}">Cerrar sesión</a></li>
