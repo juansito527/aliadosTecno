@@ -14,39 +14,108 @@
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="">¿a que convocatoria te has presentado?</label><br>
+                <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="">¿A qué convocatoria te has presentado?</label><br>
 
 
-                <input type="radio" name="1" value="gusta"> 1<br>
+                <input type="radio" name="Numconvocatoria" value="1"> 1<br>
 
-                <input type="radio" name="2+" value="gusta"> 2 o mas<br>
+                <input type="radio" name="Numconvocatoria" value="2 o más"> 2 o más<br>
 
-                <input type="radio" name="nd" value="gusta"> ninguna
+                <input type="radio" name="Numconvocatoria" value="Ninguna"> Ninguna
 
             </div>
-            <div class="md:w-1/2 px-3">
+  
+              <div class="md:w-1/2 px-3 ">
                 <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">
-                  cual?
+                  ¿Cuáles?
                 </label>
-                <div>
-                  <select class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
-                    <option>Engineering</option>
-                    <option>Design</option>
-                    <option>Customer Support</option>
-                  </select>
+
+                <!-- inicio Multi selector -->
+                <style>
+                  .input-selector{
+                    outline: none;
+                    border: none;
+                    background-color: transparent;
+                  }
+
+                  .multi-selector{
+                    width: max-content;
+                  }
+
+                  .select-field{
+                    border: 1px solid black;
+                  }
+
+                  .select-field, .convocatoria, .lista{
+                    width: 100%;
+                    background-color: white;
+                    padding: 0.3rem;
+                  }
+
+                  .lista{
+                    box-shadow: 0 30px 60px rgb(0,0,0,0.2);
+                    display: none;
+                  }
+
+                  .down-arrow{
+                    font-size: 1.2rem;
+                    display: inline-block;
+                    cursor: pointer;
+                    transition: 0.2s linear;
+                  }
+
+                  .convocatoria{
+                    display: block;
+                    padding-left: 0;
+                  }
+
+                  .show{
+                    display: block;
+                  }
+
+                  .rotate180{
+                    transform: rotate(-60deg);
+                  }
+
+                </style>
+
+                <div class="multi-selector">
+                  <div class="select-field">
+                    <input type="text" placeholder="Convocatorias" class="input-selector">
+                    <span class="down-arrow">&blacktriangledown;</span>
+                  </div>
+
+                  <div class="lista">
+                    <label for="convocatoria1" class="convocatoria">
+                        <input type="checkbox" id="convocatoria1">
+                          Convocatoria 1: internet de las coasas
+                    </label>
+                    <label for="convocatoria2" class="convocatoria">
+                      <input type="checkbox" id="convocatoria2">
+                        Convocatoria 2
+                    </label>
+                    <label for="convocatoria3" class="convocatoria">
+                    <input type="checkbox" id="convocatoria3">
+                        Convocatoria 3
+                    </label>
+                    <label for="convocatoria4" class="convocatoria">
+                    <input type="checkbox" id="convocatoria4">
+                        Convocatoria 4
+                    </label>
+                  </div>
+
+                <script>
+                  document.querySelector('.select-field').addEventListener('click',()=>{
+                    document.querySelector('.lista').classList.toggle('show');
+                    document.querySelector('.down-arrow').classList.toggle('rotate180');
+                    });
+                </script>  
+
+                  
                 </div>
-              </div>
-              <div class="md:w-1/2 px-3 " >
-                <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="department">
-                  cuales?
-                </label>
-                <div class="">
-                  <select class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="department">
-                    <option>Engineering</option>
-                    <option>Design</option>
-                    <option>Customer Support</option>
-                  </select>
-                </div>
+
+                <!-- Fin Multi selector -->
+
               </div>
           </div>
       </div>
@@ -54,7 +123,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Direccion de residencia*
+                Dirección de residencia*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-3 px-4 mb-3" id="application-link" type="text" >
             </div>
@@ -62,7 +131,7 @@
           <div class="-mx-3 md:flex mb-2">
             <div class="md:w-1/2 px-3 mb-6 md:mb-0">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="location">
-                departamento*
+                Departamento*
               </label>
               <div>
                 <select class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="location">
@@ -74,7 +143,7 @@
             </div>
             <div class="md:w-1/2 px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="job-type">
-                ciudad*
+                Ciudad*
               </label>
               <div>
                 <select class="w-full bg-gray-200 border border-gray-200 text-black text-xs py-3 px-4 pr-8 mb-3 rounded" id="job-type">
@@ -89,12 +158,12 @@
           <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
             <div class="-mx-3 md:flex mb-6">
               <div class="md:w-1/2 px-3 mb-6 md:mb-0">
-                  <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="">¿haces parte de la comunidad SENA?</label><br>
+                  <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="">¿Haces parte de la comunidad SENA?</label><br>
   
   
-                  <input type="radio" name="1" value="gusta"> Si<br>
-  
-                  <input type="radio" name="2+" value="gusta"> No<br>
+                  <input type="radio" name="parteComuni" value="Sí"> Sí<br>
+
+                  <input type="radio" name="parteComuni" value="No"> No
   
               </div>
               <div class="md:w-1/2 px-3">
@@ -144,7 +213,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Razon social de la empresa y/o negocio /nombre y apellidos*
+                Razón social de la empresa y/o negocio /nombre y apellidos*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -160,7 +229,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Naturaleza juridica*
+                Naturaleza jurídica*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -176,7 +245,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Cedula del representante legal*
+                Cédula del representante legal*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -184,7 +253,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-               Direccion de la empresa y/o negocio*
+                Dirección de la empresa y/o negocio*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -192,7 +261,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Telefonos*
+                Teléfonos*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -200,7 +269,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-               Correo electronico (empresa)*
+                Correo electrónico (empresa)*
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -239,7 +308,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Matricula de industria y Comercio #:
+                Matrícula de industria y Comercio #:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -247,7 +316,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Regimen Tributario:
+                Régimen Tributario:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -255,7 +324,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Registro Unico Tributario:
+                Registro Único Tributario:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -263,7 +332,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Sector economico:
+                Sector económico:
               </label>
               <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" >
             </div>
@@ -279,7 +348,7 @@
           <div class="-mx-3 md:flex mb-6">
             <div class="md:w-full px-3">
               <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-                Descripcion de productos
+                Descripción de productos
               </label>
               <textarea  class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="text" ></textarea>
             </div>
@@ -326,7 +395,7 @@
       <div class="-mx-3 md:flex mb-6">
         <div class="md:w-full px-3">
           <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-            Camara de comercio de la empresa:
+            Cámara de comercio de la empresa:
           </label>
           <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
         </div>
@@ -334,7 +403,7 @@
       <div class="-mx-3 md:flex mb-6">
         <div class="md:w-full px-3">
           <label class="uppercase tracking-wide text-black text-xs font-bold mb-2" for="application-link">
-            portafolio de servicios(opcional):
+            Portafolio de servicios(opcional):
           </label>
           <input class="w-full bg-gray-200 text-black border border-gray-200 rounded py-1 px-2 mb-3" id="application-link" type="file" >
         </div>

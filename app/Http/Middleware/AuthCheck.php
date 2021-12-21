@@ -17,11 +17,11 @@ class AuthCheck
     public function handle(Request $request, Closure $next)
     {
         if(!session()->has('UsuarioLogeado') && ($request->path() !='auth/login')){
-            return redirect('auth/login')->with('fail','Inicie Sesión');
+            return redirect()->route('login')->with('fail','Inicie Sesión');
         }
 
         if(session()->has('UsuarioLogeado') && ($request->path() =='auth/login')){
-            return back();
+            return redirect()->route('menuAdmin');
         }
 
         return $next($request)->header('Cache-Control','no-cache, no-store, max-age=0, must-revalidate')

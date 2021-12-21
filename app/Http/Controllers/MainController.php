@@ -33,7 +33,7 @@ class MainController extends Controller
         }else{
             if (Hash::check($request->password, $UserInfo->password)) {
                 $request->session()->put('UsuarioLogeado', $UserInfo->id);
-                return redirect('admin/menuAdmin');
+                return redirect()->route('menuAdmin');
     
             }else{
                 return back()->with('fail', 'Contraseña incorrecta');
@@ -46,7 +46,7 @@ class MainController extends Controller
     {
         if (session()->has('UsuarioLogeado')) {
             session()->pull('UsuarioLogeado');
-            return redirect('auth/login');
+            return redirect()->route('login');
         }
     }
 }

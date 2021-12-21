@@ -1,9 +1,7 @@
 <?php
 
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FiltroEmpresasController;
 use App\Http\Controllers\postulacionController;
@@ -18,20 +16,6 @@ Route::get('/', function () {
 Route::post('auth/check',[MainController::class, 'verificarLogin'])->name('verificarLogin');
 
 Route::get('/cerrarSesion',[MainController::class,'cerrarSesion'])->name('cerrarSesion');
-
-
-
-
-
-/* ruta para llamar la vista de login*/
-
-//Route::get('inicioSesion',[UserController::class,'vista'])->middleware('guest')->name('inicioSesion');
-
-//Route::post('menuAdmin',[UserController::class,'login'])->name('logeo');
-
-
-//Route::get('/cerrarSesion', [UserController::class,'cerrarSesion'])->name('cerrarSesion');
-
 
 Route::get('/error', function () {
     return view('error404');
