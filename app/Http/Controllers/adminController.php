@@ -9,11 +9,6 @@ use Illuminate\Http\Request;
 class adminController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
-
     public function vistaModulEmpresas(){
         $data = ['UsuarioLogeado'=>User::where('id', '=', session('UsuarioLogeado'))->first()];
         return view('admin/ModulEmpresas', $data);
