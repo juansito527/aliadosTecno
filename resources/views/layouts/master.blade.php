@@ -35,8 +35,8 @@
 
         <!-- Secondary Navbar items -->
         <div class="hidden md:flex items-center space-x-3 ">
-          <a href="{{route('inicioSesion')}}" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-yellow-500 hover:text-white transition duration-300">Iniciar Sesion</a>
-          <a href="" class="py-2 px-2 font-medium text-white bg-yellow-500 rounded hover:bg-yellow-600 transition duration-300">Registrarse</a>
+          <a href="{{route('login')}}" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Iniciar Sesion</a>
+          <a href="" class="py-2 px-2 font-medium text-white bg-yellow-500 rounded hover:bg-green-400 transition duration-300">Registrarse</a>
         </div>
 
         <!-- Mobile menu button -->
