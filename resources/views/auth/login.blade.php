@@ -50,6 +50,7 @@
 
                 <div class="flex flex-col pt-4">
                     <label for="password" class="text-lg">Contraseña</label>
+
                     
 
                     <input id="password" type="password" name="password" placeholder="Password" 
@@ -72,6 +73,7 @@
                     Iniciar sesión
                   </button>
                 </div>
+
 
             </form>
             <div class="text-center pt-12 pb-12">
