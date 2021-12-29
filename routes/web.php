@@ -28,7 +28,7 @@ Route::get('FiltroEmpresa', [FiltroEmpresasController::class, 'FiltroVistaEmpres
 Route::get('postulacion', [postulacionController::class, 'vistaPostulacion'])->name('postularce');
 
 /* grupo de rutas para admin */
- Daniela
+
 Route::group(['middleware' => 'AuthCheck'], function() {
     Route::get('auth/login',[MainController::class, 'login'])->name('login');
     Route::get('admin/menuAdmin',[MainController::class,'menuAdmin'])->name('menuAdmin');
