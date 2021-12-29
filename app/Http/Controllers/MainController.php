@@ -17,7 +17,6 @@ class MainController extends Controller
         return view('admin.adm', $data);
     }
 
-
     function verificarLogin(Request $request){
 
         //validar request
